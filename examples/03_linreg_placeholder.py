@@ -14,7 +14,7 @@ import tensorflow as tf
 
 import utils
 
-DATA_FILE = 'data/birth_life_2010.txt'
+DATA_FILE = 'data/birth_life_2010.txt'  
 
 # Step 1: read in data from the .txt file
 data, n_samples = utils.read_birth_life_data(DATA_FILE)
@@ -46,7 +46,7 @@ with tf.Session() as sess:
 	sess.run(tf.global_variables_initializer()) 
 	
 	# Step 8: train the model for 100 epochs
-	for i in range(100): 
+	for i in range(300): 
 		total_loss = 0
 		for x, y in data:
 			# Session execute optimizer and fetch values of loss
